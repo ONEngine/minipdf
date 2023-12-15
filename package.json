@@ -1,0 +1,17 @@
+{
+  "name": "minipdf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib.js",
+    "minipdf.js",
+    "worker.js"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "pako": "^2.1.0",
+    "text-encoding": "^0.7.0",
+    "xmldom": "^0.6.0"
+  }
+}
