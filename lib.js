@@ -1,5 +1,7 @@
 "use strict";
 
+require("./worker");
+
 var minipdf_js = (function () {
   function assert(x, msg) {
     if (x) {
