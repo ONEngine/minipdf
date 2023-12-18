@@ -1,6 +1,6 @@
 "use strict";
 
-require("./worker");
+const pdf_js = require("./worker");
 
 var minipdf_js = (function () {
   function assert(x, msg) {
@@ -11,19 +11,6 @@ var minipdf_js = (function () {
       msg = "Assertion failed";
     }
     throw new Error(msg);
-  }
-
-  var pdf_js;
-  if (typeof window != "undefined") {
-    pdf_js = PDFJS.minipdf_exports;
-  } else {
-    global.PDFJS = {};
-    global.navigator = {
-      userAgent: "pdfform.js",
-    };
-    PDFJS.disableStream = true;
-    PDFJS.disableRange = true;
-    pdf_js = require("./worker.js");
   }
 
   pdf_js.assert = assert;
