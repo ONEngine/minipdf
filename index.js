@@ -12,9 +12,7 @@ if (typeof window !== "undefined") {
   var pako = require("pako");
 }
 
-function pdfform(minipdf_lib) {
-  var assert = minipdf_lib.assert;
-
+function pdfform() {
   function BytesIO() {
     this.length = 0;
     this.entries = [];

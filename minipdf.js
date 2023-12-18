@@ -1,3 +1,5 @@
+var pako = require("pako");
+
 var minipdf = (function () {
   "use strict";
 
@@ -782,7 +784,4 @@ var minipdf = (function () {
   };
 })();
 
-if (typeof module != "undefined" && typeof require != "undefined") {
-  var pako = require("pako");
-  module.exports = minipdf;
-}
+module.exports = minipdf;
