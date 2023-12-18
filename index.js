@@ -1,6 +1,16 @@
 "use strict";
 const minipdf_lib = require("./lib.js");
 
+function assert(x, msg) {
+  if (x) {
+    return;
+  }
+  if (!msg) {
+    msg = "Assertion failed";
+  }
+  throw new Error(msg);
+}
+
 if (typeof window !== "undefined") {
   // node.js, load compat libraries
   var DOMParser = require("xmldom").DOMParser;
