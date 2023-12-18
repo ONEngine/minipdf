@@ -26,7 +26,6 @@ var minipdf_js = (function () {
     pdf_js = require("./worker.js");
   }
 
-  assert(!pdf_js.parse);
   pdf_js.assert = assert;
   pdf_js.parse = function (buf) {
     var doc = new pdf_js.PDFDocument(null, buf);
